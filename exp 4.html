@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromart - Sign In & Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full Page Background Image */
+        body {
+            background-image: url('https://storage.googleapis.com/cayroshopbucket/cayroshop/blogs/1758180063743_7a221933-53f1-4d4e-8b7f-6b0ec50eec9c_cayro%20shop.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header - Solid Blue */
+        header {
+            background: #1d5db8; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* UPDATED: Flexbox to align logo and text side-by-side */
+        .logo-container {
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+
+        .logo {
+            width: 50px;
+            filter: brightness(0) invert(1); 
+        }
+
+        /* NEW: Styling for the website title */
+        .site-title {
+            color: white;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation - Solid Grey */
+        nav {
+            background: #888;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 40px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav ul li:hover {
+            background: #555;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #1d5db8;
+            width: 180px;
+            z-index: 100;
+        }
+
+        .dropdown li {
+            width: 100%;
+        }
+
+        .dropdown li a {
+            padding: 15px;
+            font-weight: normal;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li:hover {
+            background: #0d47a1;
+        }
+
+        /* Form Section */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 20px;
+            min-height: 60vh;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.95); 
+            width: 320px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 22px;
+            color: #000;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 13px;
+            color: #333;
+            display: block; 
+            margin-bottom: 5px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #0d6efd; 
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type=submit]:hover {
+            background: #0b5ed7;
+        }
+
+        /* Footer - Beige */
+        footer {
+            background: #f7deb4;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/908/908581.png" alt="Electromart Logo" class="logo">
+            <!-- Added the website title here -->
+            <h1 class="site-title">Electromart Electronics</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a>
+                    <ul class="dropdown">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Today's Deals</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Model</a></li>
+                <li><a href="#">Others</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Forms Section -->
+    <section class="container">
+        <!-- Sign In Box -->
+        <div class="box">
+            <h2>Sign In</h2>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username">
+                
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                
+                <input type="submit" value="Sign In">
+            </form>
+        </div>
+
+        <!-- Sign Up Box -->
+        <div class="box">
+            <h2>Sign Up</h2>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter Name">
+                
+                <label>Email</label>
+                <input type="email" placeholder="Enter Email">
+                
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Austine Philip Abraham | Karunya Deemed to be University, Coimbatore, Tamil Nadu</p>
+        <p>&copy; 2026-2027. (URK24CS1078) - Web Technology Lab Batch 1. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
